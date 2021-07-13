@@ -10,9 +10,9 @@ returns 23
 
 def sum_of_multiples(num):
     aggregate = 0
-    for number in range(num):
-        if number % 3 == 0 or number % 5 == 0:
-            aggregate = aggregate + number
+    multiples_of_3_or_5 = [number for number in range(num) if number % 3 == 0 or number % 5 == 0]
+    for number in multiples_of_3_or_5:
+        aggregate = aggregate + number
     return aggregate
 
 def test_sum_of_multiples_solution():
@@ -24,3 +24,5 @@ def test_sum_of_multiples_solution():
     assert sum_of_multiples(64) == 933
 
 test_sum_of_multiples_solution()
+
+# CHALLENGE: refactor to use list comprehension
