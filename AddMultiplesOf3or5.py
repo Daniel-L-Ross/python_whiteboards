@@ -12,7 +12,7 @@ def sum_of_multiples(num):
     aggregate = 0
     multiples_of_3_or_5 = [number for number in range(num) if number % 3 == 0 or number % 5 == 0]
     for number in multiples_of_3_or_5:
-        aggregate = aggregate + number
+        aggregate += number
     return aggregate
 
 def test_sum_of_multiples_solution():
